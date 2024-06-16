@@ -1,0 +1,34 @@
+/*이름은 항상 module.css이어야 하고 위치는 상관없음*/
+
+/*고정된 위치의 네비게이션 바 스타일을 설정*/
+.nav {
+  background-color: #2d2d2d; /* 배경 색상 설정 */
+  position: fixed; /* 스크롤해도 항상 같은 위치에 고정 */
+  width: 30%; /* 너비를 30%로 설정 */
+  margin: 0 auto; /* 위아래 여백을 0으로 설정, 양옆 여백을 자동으로 설정 */
+  top: 20px; /* 상단에서 20픽셀 떨어진 위치에 배치 */
+  border-radius: 50px; /* 테두리를 둥글게 설정 */
+  padding: 20px 0px; /* 상하 여백 20픽셀, 좌우 여백 0픽셀 */
+  left: 50%; /* 왼쪽에서 50% 위치에 배치 */
+  z-index: 10; /* 다른 요소들보다 위에 표시되도록 설정 */
+  transform: translateX(-50%); /* 요소를 왼쪽으로 50%만큼 이동하여 중앙 정렬 */
+}
+
+/*Flexbox를 사용하여 자식 요소들을 중앙에 정렬*/
+.nav ul {
+  display: flex; /* Flexbox 레이아웃 사용 */
+  justify-content: center; /* 자식 요소들을 중앙에 정렬 */
+  gap: 50px; /* 자식 요소들 사이의 간격을 50픽셀로 설정 */
+}
+
+/*기본 리스트 스타일 제거하고 요소에 변형을 적용할 수 있도록 설정*/
+.nav ul li {
+  list-style: none; /* 기본 리스트 스타일 제거 */
+  transform: none; /* 기본 변형 없음 */
+  transition: all 0.1s ease-in-out; /* 모든 변화를 0.1초 동안 부드럽게 적용 */
+}
+
+
+.nav ul li:hover {
+  transform: scale(1.05); /* 마우스를 올리면 요소를 1.05배 확대 */
+}
