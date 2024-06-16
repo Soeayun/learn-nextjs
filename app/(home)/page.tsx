@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import styles from "../../styles/home.module.css";
-import Movie from "../../components/movie.tsx";
+import Movie from "../../components/movie";
+import {API_URL} from "../constants";
 
 export const metadata={
     title: "Home",
 };
 
-export const API_URL="https://nomad-movies.nomadcoders.workers.dev/movies"
 
 // 로딩 상타내는 존재하지만 빠른 것은 server componet에서 내가 fetch한 것을 기억하기 때문!
 // API 응답이 느리면 오래걸리 수 있음, 한번만 API에 요청되고 나머지는 안되서 빠른거임
