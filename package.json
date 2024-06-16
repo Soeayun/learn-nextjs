@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev":"next dev"
+    "build":"next build" // 홈페이지를 실제로 production 용으로 만들어줌
+    "start":"next start" // 홈페이지를 production 모드로 시작해줌
   },
   "keywords": [],
   "author": "",
