@@ -19,7 +19,7 @@ export default function Movie({title,id,poster_path}:IMovieProps){
     return(
         <div className={styles.movie} > {/* CSS 모듈 사용하여 스타일 적용 */}
             <img src={poster_path} alt={title} onClick={onClick} />{/* 포스터 이미지 */}
-            <Link href={`/movies/${id}`}>{title}</Link> {/* 영화 제목을 링크로 표시 */}
+            <Link prefetch href={`/movies/${id}`}>{title}</Link> {/* 영화 제목을 링크로 표시 */}
         </div>
     );
 }
